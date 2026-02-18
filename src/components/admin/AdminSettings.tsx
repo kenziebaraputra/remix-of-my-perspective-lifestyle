@@ -9,8 +9,44 @@ type Settings = Record<string, string>;
 const SETTING_KEYS = [
   "hero_title", "hero_subtitle", "intro_text",
   "about_bio", "about_image",
-  "footer_email", "footer_instagram", "footer_x", "footer_copyright",
+  "footer_email", "footer_instagram", "footer_x", "footer_youtube", "footer_copyright",
+  "footer_privacy_url", "footer_terms_url",
 ];
+
+// Field component defined outside so it doesn't remount on every keystroke
+const Field = ({
+  label,
+  value,
+  onChange,
+  multiline = false,
+  placeholder = "",
+}: {
+  label: string;
+  value: string;
+  onChange: (v: string) => void;
+  multiline?: boolean;
+  placeholder?: string;
+}) => (
+  <div>
+    <label className="block text-sm font-medium mb-1">{label}</label>
+    {multiline ? (
+      <textarea
+        rows={5}
+        className="w-full px-4 py-3 rounded-xl border border-input bg-background focus:outline-none focus:ring-2 focus:ring-ring resize-none"
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        placeholder={placeholder}
+      />
+    ) : (
+      <input
+        className="w-full px-4 py-3 rounded-xl border border-input bg-background focus:outline-none focus:ring-2 focus:ring-ring"
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        placeholder={placeholder}
+      />
+    )}
+  </div>
+);
 
 const AdminSettings = () => {
   const [settings, setSettings] = useState<Settings>({});
@@ -49,28 +85,6 @@ const AdminSettings = () => {
     }
   };
 
-  const Field = ({ label, keyName, multiline = false, placeholder = "" }: { label: string; keyName: string; multiline?: boolean; placeholder?: string }) => (
-    <div>
-      <label className="block text-sm font-medium mb-1">{label}</label>
-      {multiline ? (
-        <textarea
-          rows={5}
-          className="w-full px-4 py-3 rounded-xl border border-input bg-background focus:outline-none focus:ring-2 focus:ring-ring resize-none"
-          value={settings[keyName] ?? ""}
-          onChange={(e) => setValue(keyName, e.target.value)}
-          placeholder={placeholder}
-        />
-      ) : (
-        <input
-          className="w-full px-4 py-3 rounded-xl border border-input bg-background focus:outline-none focus:ring-2 focus:ring-ring"
-          value={settings[keyName] ?? ""}
-          onChange={(e) => setValue(keyName, e.target.value)}
-          placeholder={placeholder}
-        />
-      )}
-    </div>
-  );
-
   if (loading) {
     return <div className="space-y-4">{[1,2,3,4].map((i) => <div key={i} className="h-12 bg-muted rounded-xl animate-pulse" />)}</div>;
   }
@@ -94,17 +108,18 @@ const AdminSettings = () => {
           <TabsTrigger value="home">Home</TabsTrigger>
           <TabsTrigger value="about">About</TabsTrigger>
           <TabsTrigger value="social">Footer & Social</TabsTrigger>
+          <TabsTrigger value="legal">Legal</TabsTrigger>
         </TabsList>
 
         <TabsContent value="home" className="space-y-4">
-          <Field label="Hero Title" keyName="hero_title" placeholder="Where Every Story Begins" />
-          <Field label="Hero Subtitle" keyName="hero_subtitle" multiline placeholder="Welcome to Sulung Arung…" />
-          <Field label="Intro Text" keyName="intro_text" multiline placeholder="Sulung Arung is a creative space…" />
+          <Field label="Hero Title" value={settings["hero_title"] ?? ""} onChange={(v) => setValue("hero_title", v)} placeholder="Where Every Story Begins" />
+          <Field label="Hero Subtitle" value={settings["hero_subtitle"] ?? ""} onChange={(v) => setValue("hero_subtitle", v)} multiline placeholder="Welcome to Sulung Arung…" />
+          <Field label="Intro Text" value={settings["intro_text"] ?? ""} onChange={(v) => setValue("intro_text", v)} multiline placeholder="Sulung Arung is a creative space…" />
         </TabsContent>
 
         <TabsContent value="about" className="space-y-4">
-          <Field label="Biography" keyName="about_bio" multiline placeholder="Tell your story…" />
-          <Field label="About Image URL" keyName="about_image" placeholder="https://..." />
+          <Field label="Biography" value={settings["about_bio"] ?? ""} onChange={(v) => setValue("about_bio", v)} multiline placeholder="Tell your story…" />
+          <Field label="About Image URL" value={settings["about_image"] ?? ""} onChange={(v) => setValue("about_image", v)} placeholder="https://..." />
           {settings.about_image && (
             <div className="rounded-2xl overflow-hidden aspect-square max-w-xs">
               <img src={settings.about_image} alt="Preview" className="w-full h-full object-cover" />
@@ -113,10 +128,16 @@ const AdminSettings = () => {
         </TabsContent>
 
         <TabsContent value="social" className="space-y-4">
-          <Field label="Contact Email" keyName="footer_email" placeholder="hello@sulungarung.com" />
-          <Field label="Instagram URL" keyName="footer_instagram" placeholder="https://instagram.com/..." />
-          <Field label="X (Twitter) URL" keyName="footer_x" placeholder="https://x.com/..." />
-          <Field label="Copyright Text" keyName="footer_copyright" placeholder="© 2026 Sulung Arung. All rights reserved." />
+          <Field label="Contact Email" value={settings["footer_email"] ?? ""} onChange={(v) => setValue("footer_email", v)} placeholder="hello@sulungarung.com" />
+          <Field label="Instagram URL" value={settings["footer_instagram"] ?? ""} onChange={(v) => setValue("footer_instagram", v)} placeholder="https://instagram.com/..." />
+          <Field label="X (Twitter) URL" value={settings["footer_x"] ?? ""} onChange={(v) => setValue("footer_x", v)} placeholder="https://x.com/..." />
+          <Field label="YouTube URL" value={settings["footer_youtube"] ?? ""} onChange={(v) => setValue("footer_youtube", v)} placeholder="https://youtube.com/@..." />
+          <Field label="Copyright Text" value={settings["footer_copyright"] ?? ""} onChange={(v) => setValue("footer_copyright", v)} placeholder="© 2026 Sulung Arung. All rights reserved." />
+        </TabsContent>
+
+        <TabsContent value="legal" className="space-y-4">
+          <Field label="Privacy Policy URL" value={settings["footer_privacy_url"] ?? ""} onChange={(v) => setValue("footer_privacy_url", v)} placeholder="/privacy" />
+          <Field label="Terms of Service URL" value={settings["footer_terms_url"] ?? ""} onChange={(v) => setValue("footer_terms_url", v)} placeholder="/terms" />
         </TabsContent>
       </Tabs>
     </div>

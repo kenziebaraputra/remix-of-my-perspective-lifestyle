@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { useNavigate } from "react-router-dom";
+import { useTheme } from "next-themes";
 import {
   LayoutDashboard,
   BookOpen,
@@ -9,7 +10,8 @@ import {
   Settings,
   LogOut,
   Menu,
-  X,
+  Sun,
+  Moon,
   Library,
 } from "lucide-react";
 
@@ -33,6 +35,7 @@ const navItems: { id: Section; label: string; icon: React.ElementType }[] = [
 const AdminLayout = ({ children, activeSection, onSectionChange }: AdminLayoutProps) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const navigate = useNavigate();
+  const { theme, setTheme } = useTheme();
 
   const handleLogout = async () => {
     await supabase.auth.signOut();
@@ -118,9 +121,16 @@ const AdminLayout = ({ children, activeSection, onSectionChange }: AdminLayoutPr
           >
             <Menu className="w-5 h-5" />
           </button>
-          <h1 className="font-semibold text-lg capitalize">
+          <h1 className="font-semibold text-lg capitalize flex-1">
             {navItems.find((n) => n.id === activeSection)?.label ?? "Dashboard"}
           </h1>
+          <button
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            className="p-2 rounded-lg hover:bg-muted transition-colors"
+            aria-label="Toggle theme"
+          >
+            {theme === "dark" ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+          </button>
         </header>
 
         {/* Content */}
