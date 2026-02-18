@@ -262,4 +262,16 @@ All colors MUST be HSL.
   .tag-growth {
     @apply bg-[hsl(var(--tag-growth))] text-primary;
   }
+
+  .tag-stories {
+    @apply bg-[hsl(var(--tag-travel))] text-primary;
+  }
+
+  .tag-journals {
+    @apply bg-[hsl(var(--tag-lifestyle))] text-primary;
+  }
+
+  .tag-illustrations {
+    @apply bg-[hsl(var(--tag-creativity))] text-primary;
+  }
 }
