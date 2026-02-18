@@ -1,12 +1,15 @@
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
-import { Instagram, Twitter, Mail } from "lucide-react";
+import { Instagram, Twitter, Youtube } from "lucide-react";
 
 interface FooterSettings {
   footer_email: string;
   footer_instagram: string;
   footer_x: string;
+  footer_youtube: string;
   footer_copyright: string;
+  footer_privacy_url: string;
+  footer_terms_url: string;
 }
 
 const Footer = () => {
@@ -14,7 +17,10 @@ const Footer = () => {
     footer_email: "hello@sulungarung.com",
     footer_instagram: "https://instagram.com/sulungarung",
     footer_x: "https://x.com/sulungarung",
+    footer_youtube: "https://youtube.com/@sulungarung",
     footer_copyright: "© 2026 Sulung Arung. All rights reserved.",
+    footer_privacy_url: "/privacy",
+    footer_terms_url: "/terms",
   });
 
   useEffect(() => {
@@ -22,7 +28,7 @@ const Footer = () => {
       const { data } = await supabase
         .from("site_settings")
         .select("key, value")
-        .in("key", ["footer_email", "footer_instagram", "footer_x", "footer_copyright"]);
+        .in("key", ["footer_email", "footer_instagram", "footer_x", "footer_youtube", "footer_copyright", "footer_privacy_url", "footer_terms_url"]);
       if (data) {
         const mapped: Record<string, string> = {};
         data.forEach((row) => { if (row.value) mapped[row.key] = row.value; });
@@ -65,8 +71,8 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href={`mailto:${settings.footer_email}`} className="hover:text-accent transition-colors flex items-center gap-2">
-                  <Mail className="w-4 h-4" /> Email
+                <a href={settings.footer_youtube} target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors flex items-center gap-2">
+                  <Youtube className="w-4 h-4" /> YouTube
                 </a>
               </li>
             </ul>
@@ -74,8 +80,8 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4">Legal</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="/privacy" className="hover:text-accent transition-colors">Privacy Policy</a></li>
-              <li><a href="/terms" className="hover:text-accent transition-colors">Terms of Service</a></li>
+              <li><a href={settings.footer_privacy_url} className="hover:text-accent transition-colors">Privacy Policy</a></li>
+              <li><a href={settings.footer_terms_url} className="hover:text-accent transition-colors">Terms of Service</a></li>
             </ul>
           </div>
         </div>
