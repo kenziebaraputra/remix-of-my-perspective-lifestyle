@@ -3,6 +3,7 @@ export interface Article {
   title: string;
   subtitle: string;
   category: string;
+  genre?: string;
   date: string;
   readTime: string;
   image: string;
@@ -25,260 +26,259 @@ export interface Article {
 export const articles: Article[] = [
   {
     id: "001",
-    title: "Whispers of Wisdom",
-    subtitle: "Finding clarity in the quiet moments of financial planning",
-    category: "Financing",
-    date: "Oct 16, 2024",
-    readTime: "5 min",
-    image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1920&q=80",
+    title: "The Last Signal from Kepler-442",
+    subtitle: "When humanity reaches out across the stars, something reaches back",
+    category: "Stories",
+    genre: "Sci-Fi",
+    date: "Jan 12, 2026",
+    readTime: "9 min",
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80",
     author: {
-      name: "David Kim",
-      avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&q=80",
-      bio: "Financial wellness writer and personal growth advocate",
+      name: "Sulung Arung",
+      avatar: "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&q=80",
+      bio: "Fiction writer exploring the boundaries of space and time",
     },
     content: {
-      introduction: "In a world of financial noise and conflicting advice, sometimes the wisest course of action is to listen to the whispers—those quiet moments of clarity that cut through the chaos. Financial planning isn't just about numbers; it's about understanding your values and aligning your resources with what truly matters.",
+      introduction:
+        "The message arrived at 03:14 station time — not in radio waves or laser pulses, but as a trembling in the dark matter weave itself. Dr. Yara Osei sat alone at Console Seven when the instruments began their frantic song, and she understood before any algorithm did: we were no longer the ones asking the question.",
       sections: [
         {
-          heading: "The Power of Quiet Reflection",
-          content: "Before making any major financial decision, we often rush to consume more information, read more articles, or seek more advice. Yet the most profound insights often come when we step back and simply reflect. Taking time for quiet contemplation allows us to connect with our deeper values and understand what financial security truly means to us—not what society tells us it should mean.",
+          heading: "The Signal Architecture",
+          content:
+            "It was structured like music — nested harmonics that unfolded into mathematics, then biology, then something the linguists would spend decades calling 'emotional syntax.' The signal did not describe a civilization. It described a feeling. And the feeling was, unmistakably, longing.",
         },
         {
-          heading: "Building Financial Awareness",
-          content: "True financial wisdom begins with awareness. This means honestly assessing where you are, understanding your patterns and behaviors around money, and recognizing the emotional drivers behind your financial decisions. It's not about judgment, but about clear-eyed observation. When we can see our financial reality clearly, we're empowered to make intentional changes.",
+          heading: "Yara's Choice",
+          content:
+            "She had forty seconds before the automated broadcast protocols would alert the entire station. Forty seconds in which she could be the only human being who had ever truly heard another intelligence speak. She pressed her palm against the cold metal of the console and listened. The signal repeated, patient as starlight.",
         },
         {
-          heading: "Small Steps, Lasting Change",
-          content: "The whispers of wisdom often guide us toward small, sustainable actions rather than dramatic overhauls. Perhaps it's automating a small savings contribution, or finally organizing your financial documents, or having that honest conversation about money with your partner. These quiet actions, consistently applied, create profound change over time.",
+          heading: "What the Stars Keep",
+          content:
+            "The response teams argued for months about what to send back. Politicians wanted triumph. Scientists wanted data. The poets — nobody listened to the poets until Yara played the recording in an empty conference room and a veteran mission commander began to cry. They sent back music. A child's lullaby, recorded in seventeen languages.",
         },
         {
-          heading: "Values-Based Financial Planning",
-          content: "When we align our financial decisions with our core values, money becomes a tool for creating the life we want rather than a source of stress and confusion. Ask yourself: What do I truly value? How can my financial choices support those values? The answers to these questions are your compass in navigating financial decisions.",
+          heading: "Silence After",
+          content:
+            "Kepler-442 went quiet after that. Some said they had offended. Some said they had been deemed not ready. Yara believed neither. She believed the signal had never been intended for civilization — it had been intended for the one person awake at 03:14, alone with the dark, willing to simply listen.",
         },
       ],
-      conclusion: "Financial wisdom isn't found in the loudest voices or the most complex strategies. It's discovered in quiet moments of reflection, in the gentle guidance of your values, and in the consistent application of simple, intentional actions. Listen to the whispers—they often speak the deepest truths.",
+      conclusion:
+        "We build telescopes to close the distance between ourselves and the infinite. But sometimes the infinite already knows where we are. Sometimes it has been waiting, quietly, for us to stop broadcasting and start listening.",
     },
-    tags: ["financial planning", "mindfulness", "personal finance", "values"],
+    tags: ["science fiction", "space", "first contact", "loneliness"],
   },
   {
     id: "002",
-    title: "Ink-Stained Insights",
-    subtitle: "The art of journaling for a more intentional lifestyle",
-    category: "Lifestyle",
-    date: "Oct 23, 2024",
-    readTime: "6 min",
-    image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1920&q=80",
+    title: "Paper Cranes in the Rain",
+    subtitle: "A love story told in origami, memory, and things unsaid",
+    category: "Stories",
+    genre: "Romance",
+    date: "Jan 28, 2026",
+    readTime: "7 min",
+    image: "https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=1920&q=80",
     author: {
-      name: "Sofia Rodriguez",
-      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&q=80",
-      bio: "Creative writer and mindfulness practitioner",
+      name: "Sulung Arung",
+      avatar: "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&q=80",
+      bio: "Fiction writer exploring the boundaries of space and time",
     },
     content: {
-      introduction: "There's something profound about putting pen to paper—the way ink flows across the page, capturing thoughts that might otherwise evaporate. In our digital age, the practice of journaling offers a rare opportunity to slow down, reflect, and connect with ourselves in a tangible, meaningful way.",
+      introduction:
+        "She learned to fold paper cranes the winter her mother left, working through three reams of printer paper before her fingers remembered the angles without thinking. By spring she had given them all away — to neighbors, to strangers on buses, tucked under the wipers of cars whose owners looked sad. One landed, somehow, on the desk of a man named Io, who kept it for eleven years.",
       sections: [
         {
-          heading: "Why Analog Matters",
-          content: "While digital tools have their place, there's neuroscience behind why handwriting engages our brain differently. The physical act of writing slows our thinking, allowing for deeper processing and reflection. It's a form of mindfulness in action, anchoring us in the present moment while we explore our inner landscape.",
+          heading: "The First Fold",
+          content:
+            "Io found the crane on a Tuesday during the sort of rain that makes the whole city smell like old books. He had been sitting in a borrowed office, considering a letter of resignation. The crane sat on his keyboard, slightly damp, wings trembling in the draft from the air conditioner. He did not resign that day.",
         },
         {
-          heading: "Creating Your Practice",
-          content: "Your journaling practice doesn't need to be elaborate or time-consuming. Start with five minutes each morning or evening. Write freely without judgment—this isn't about perfect prose or profound insights. It's about showing up for yourself, creating space for reflection, and building a relationship with your thoughts and feelings.",
+          heading: "A Thousand Cranes",
+          content:
+            "Japanese legend promises that folding a thousand cranes grants a single wish. She had stopped counting at three hundred, the winter she was fifteen. She had wished for her mother to return. By the time she met Io — in a bookshop doorway during another November rain — she had decided wishes were beside the point. Presence was the point. Showing up in doorways.",
         },
         {
-          heading: "Prompts for Deeper Reflection",
-          content: "When you're not sure what to write, prompts can guide you: What am I grateful for today? What challenged me and what did I learn? What do I need more of in my life? What can I let go of? These questions invite introspection and help us identify patterns in our thoughts and behaviors.",
+          heading: "What He Kept",
+          content:
+            "He still had the crane. That was the first thing she noticed about his apartment — the glass case on the shelf, containing one slightly weathered paper crane beside a small card that read 'Tuesday, Rain.' She recognized the fold pattern immediately. Her fold pattern. The particular way she creased the wingtips.",
         },
         {
-          heading: "The Gift of Looking Back",
-          content: "One of journaling's greatest gifts reveals itself over time. Looking back through old entries, we see how we've grown, what we've overcome, and patterns we might want to change. This historical perspective offers wisdom we can't access in the present moment alone.",
+          heading: "The Eleven-Year Question",
+          content:
+            "He asked how she had known to leave it. She told him she hadn't. She told him she had been walking past a building during a rainstorm, seen a window lit against the grey, and felt an overwhelming urgency to fold something and send it upward. Love, she had come to believe, worked like that sometimes — not chosen, not planned, just delivered to the right desk at the right hour.",
         },
       ],
-      conclusion: "Journaling is more than record-keeping—it's a practice of self-discovery and intentional living. Those ink-stained pages become a map of your inner journey, a testament to your growth, and a tool for creating the life you envision. Start today, even if just for five minutes. Your future self will thank you.",
+      conclusion:
+        "They stayed in the doorway until the rain stopped. Then they went inside. Some stories do not need more than that: the rain, the shelter, two people who had been circling each other across eleven years of a city that was, it turned out, never quite big enough to keep them apart.",
     },
-    tags: ["journaling", "mindfulness", "self-reflection", "lifestyle"],
+    tags: ["romance", "fate", "origami", "love"],
   },
   {
     id: "003",
-    title: "Musings in Grayscale",
-    subtitle: "Finding beauty and clarity in life's neutral moments",
-    category: "Community",
-    date: "Dec 4, 2024",
+    title: "The House on Hollow Road",
+    subtitle: "It watches. It waits. And it always remembers.",
+    category: "Stories",
+    genre: "Horror",
+    date: "Feb 3, 2026",
+    readTime: "10 min",
+    image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=1920&q=80",
+    author: {
+      name: "Sulung Arung",
+      avatar: "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&q=80",
+      bio: "Fiction writer exploring the boundaries of space and time",
+    },
+    content: {
+      introduction:
+        "The real estate listing did not mention that the house breathed. It mentioned original hardwood floors, a claw-foot tub, and the charming overgrown garden. It mentioned good bones. Maren Lux had always trusted bones. She should have asked what the bones remembered.",
+      sections: [
+        {
+          heading: "First Night",
+          content:
+            "The sound began at 2 AM — not footsteps exactly, but the rhythm of footsteps. The negative space of a presence. The floorboards compressed without weight. The curtains moved without wind. Maren lay still and counted the sounds and told herself: old houses settle. Old houses are full of trapped air and memory. She counted to forty-seven before sleep took her.",
+        },
+        {
+          heading: "The Photographs",
+          content:
+            "She found them in the basement — not hidden, just forgotten. Forty years of a family she did not recognize, in rooms she did recognize because they were her rooms now. The last photograph was different from the others. Every face had been removed. Cut out with scissors, with the care of someone performing surgery. Only the house remained, the same in every picture, unmoved by the decades.",
+        },
+        {
+          heading: "What the Walls Know",
+          content:
+            "The neighbor across the road told her, over the fence, that the previous family had moved in the winter and been gone by spring. And the family before that. And the family before that. He said this without emphasis, the way you might describe weather. She asked what happened to them. He considered the question for a long moment. 'Nothing happened,' he said. 'That's what makes it so strange.'",
+        },
+        {
+          heading: "Her Decision",
+          content:
+            "Maren was not the kind of woman who ran. She was the kind of woman who made notes. She filled three notebooks that spring, cataloguing every sound, every temperature drop, every mirror that showed more than it should. The house seemed to appreciate this. The sounds grew quieter. The curtains settled. By summer, she understood: the house did not want victims. It wanted witnesses.",
+        },
+      ],
+      conclusion:
+        "She is still there. The lights in her study burn past midnight most nights. If you drive down Hollow Road — and you should not, but if you do — you will see her silhouette in the window, bent over her notebooks, and behind her, just at the edge of visible, something that might be shadow. Something that watches her write, patient and ancient and satisfied.",
+    },
+    tags: ["horror", "haunting", "psychological", "atmosphere"],
+  },
+  {
+    id: "J001",
+    title: "On Finishing Things",
+    subtitle: "A journal entry about the strange grief of completing what you love",
+    category: "Journals",
+    genre: "Personal",
+    date: "Feb 8, 2026",
     readTime: "5 min",
-    image: "https://images.unsplash.com/photo-1511988617509-a57c8a288659?w=1920&q=80",
+    image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1920&q=80",
     author: {
-      name: "Marcus Chen",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
-      bio: "Community builder and contemplative writer",
+      name: "Sulung Arung",
+      avatar: "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&q=80",
+      bio: "Fiction writer exploring the boundaries of space and time",
     },
     content: {
-      introduction: "We often seek the extremes—the peaks of joy, the depths of sorrow, the bright colors that define our experiences. But what about the in-between? The neutral moments, the grayscale of everyday life that makes up most of our existence? There's unexpected beauty and wisdom in these spaces.",
+      introduction:
+        "I finished the draft at 11:47 PM on a Wednesday, and my first feeling was not triumph. It was something closer to bereavement. The characters I had lived with for eight months were still alive in my head — still walking around, still making their mistakes — but the book was done, and that meant they were no longer mine to follow.",
       sections: [
         {
-          heading: "The Overlooked Majority",
-          content: "Most of life isn't dramatic. It's morning coffee, routine commutes, quiet evenings, and ordinary conversations. We tend to overlook these moments, waiting for something 'significant' to happen. Yet these grayscale moments—when approached with presence and appreciation—contain their own quiet richness.",
+          heading: "The Ending Problem",
+          content:
+            "Nobody tells you that finishing a long project is its own kind of grief. We celebrate endings — parties, certificates, the closing of a cover. But grief and celebration are not opposites. They are neighbors, sharing a wall. I have finished four novels now and each time I sit with the strange quiet of the last page and wonder what to do with the empty hours.",
         },
         {
-          heading: "Community in the Mundane",
-          content: "Some of the deepest community connections happen not in grand gestures but in ordinary moments: the neighbor who waves each morning, the barista who remembers your order, the colleague who checks in during a regular Tuesday. These small, repeated interactions create the texture of belonging.",
+          heading: "What Remains",
+          content:
+            "I keep a notebook of things I noticed while writing — images, sentences that didn't make the cut, questions I couldn't answer. It's not about the work. It's about proving I was present. That those eight months happened. That the characters were, in some way that matters, real enough to leave marks.",
         },
         {
-          heading: "Finding Clarity in Neutrality",
-          content: "When we're not caught up in emotional extremes, we can see more clearly. The grayscale moments offer perspective—a chance to observe our lives without the distortion of intense emotion. This clarity helps us make better decisions and understand what truly matters to us.",
-        },
-        {
-          heading: "Cultivating Appreciation",
-          content: "Learning to appreciate the neutral doesn't mean settling for less—it means expanding our capacity for contentment. It's recognizing that a quiet Sunday afternoon, a simple meal with friends, or a walk without destination has its own value. This appreciation makes us resilient and less dependent on external circumstances for our sense of wellbeing.",
+          heading: "Beginning Again",
+          content:
+            "The cure, I've found, is not to immediately start something new — that only defers the grief. The cure is to sit with the finished thing. Read it. Let it be done. Then, when the grief has done its work, the next beginning arrives on its own: a name, a place, a voice you haven't heard before, asking to be followed.",
         },
       ],
-      conclusion: "Life in grayscale isn't boring—it's the canvas on which everything else appears. By learning to appreciate these neutral moments and the community connections within them, we enrich our entire experience. The next time you find yourself in an 'ordinary' moment, pause and look closer. You might be surprised by what you find.",
+      conclusion:
+        "Every ending is a kind of courage. You decided the story was complete, which means you decided to let it go. That is its own art form. The art of the open hand.",
     },
-    tags: ["mindfulness", "community", "presence", "contentment"],
+    tags: ["writing life", "creativity", "journals", "process"],
   },
   {
-    id: "W001",
-    title: "Finding Balance: How to Create a Sustainable Self-Care Routine",
-    subtitle: "Developing practices that actually stick",
-    category: "Wellness",
-    date: "Mar 19, 2025",
-    readTime: "7 min",
-    image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1920&q=80",
+    id: "J002",
+    title: "The 4 AM Hours",
+    subtitle: "There are kinds of thinking that only happen in the dark",
+    category: "Journals",
+    genre: "Reflection",
+    date: "Jan 20, 2026",
+    readTime: "4 min",
+    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80",
     author: {
-      name: "Emma Thompson",
-      avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80",
-      bio: "Certified wellness coach and holistic health practitioner",
+      name: "Sulung Arung",
+      avatar: "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&q=80",
+      bio: "Fiction writer exploring the boundaries of space and time",
     },
     content: {
-      introduction: "Self-care has become a buzzword, often associated with spa days and indulgent treats. While these have their place, true self-care is about sustainable practices that support your physical, mental, and emotional wellbeing consistently—not just when you're burned out.",
+      introduction:
+        "I am reliably awake between 4 and 5 AM. This used to disturb me. Now I protect it. There is a quality of thought available only in that hour — before the day has its demands, before the world comes online — that I have found nowhere else.",
       sections: [
         {
-          heading: "Understanding Your Needs",
-          content: "Before building a self-care routine, you need to understand what you actually need. Are you lacking physical movement, mental rest, emotional processing, or social connection? Self-care isn't one-size-fits-all. Take time to honestly assess where you're depleted and what would genuinely nourish you.",
+          heading: "What the Dark Allows",
+          content:
+            "In daylight, thinking has an audience. Even alone, we perform our thoughts for some imagined observer. At 4 AM there is no observer. The thoughts arrive without announcement and leave without apology. I have solved plot problems at 4 AM that daytime could not touch. I have also cried, unexpectedly, about things I did not know I was carrying.",
         },
         {
-          heading: "Start Small and Specific",
-          content: "The biggest mistake people make with self-care is trying to overhaul everything at once. Instead, start with one small, specific practice. Maybe it's five minutes of stretching each morning, or drinking a glass of water before coffee, or spending ten minutes outside daily. Small, consistent actions create lasting change.",
-        },
-        {
-          heading: "The Four Pillars of Wellness",
-          content: "A balanced self-care routine addresses four key areas: physical health (movement, nutrition, sleep), mental health (stress management, learning, rest), emotional health (processing feelings, connection, creativity), and spiritual health (meaning, purpose, values alignment). You don't need elaborate practices in each area—just intentional attention.",
-        },
-        {
-          heading: "Making It Sustainable",
-          content: "Sustainability comes from integration, not addition. Instead of adding more to your already full schedule, look for ways to integrate self-care into existing routines. Take walking meetings, practice mindful eating during meals you already eat, or turn your commute into a time for podcasts that inspire you.",
-        },
-        {
-          heading: "When Self-Care Feels Selfish",
-          content: "Many people struggle with guilt around self-care, especially caregivers. Remember: you can't pour from an empty cup. Taking care of yourself isn't selfish—it's necessary for showing up as your best self for others. Your wellbeing matters, not just as a means to serve others, but as an end in itself.",
+          heading: "The Practice",
+          content:
+            "I keep a glass of water and a notebook beside the bed. No phone. The phone is the end of the 4 AM hours — it immediately restores the audience. The notebook is different. It receives without judgment. Some mornings there are three words. Some mornings, pages. Both count.",
         },
       ],
-      conclusion: "A sustainable self-care routine isn't about perfection or elaborate practices. It's about consistent, intentional actions that support your wellbeing across all dimensions of health. Start small, be patient with yourself, and remember that self-care is a practice, not a destination.",
+      conclusion:
+        "The 4 AM hours are not about productivity. They are about acquaintance — with yourself, with the particular shape of your mind when it is not trying to impress anyone. I recommend them to everyone, though I know they can't be scheduled. They arrive when they're ready.",
     },
-    tags: ["self-care", "wellness", "mindfulness", "sustainable living"],
+    tags: ["insomnia", "creativity", "night", "writing life"],
   },
   {
-    id: "T001",
-    title: "The Art of Slow Travel: Embracing Local Experiences",
-    subtitle: "Discovering depth over distance in your journeys",
-    category: "Travel",
-    date: "Mar 15, 2025",
-    readTime: "8 min",
-    image: "https://images.unsplash.com/photo-1488085061387-422e29b40080?w=1920&q=80",
+    id: "IL001",
+    title: "Ink and Light: Sketching the Unseen",
+    subtitle: "A visual journey through the spaces between words",
+    category: "Illustrations",
+    genre: "Art",
+    date: "Feb 10, 2026",
+    readTime: "3 min",
+    image: "https://images.unsplash.com/photo-1541516160071-4bb0c5af65ba?w=1920&q=80",
     author: {
-      name: "Marcus Chen",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
-      bio: "Slow travel advocate and cultural immersion specialist",
+      name: "Sulung Arung",
+      avatar: "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&q=80",
+      bio: "Fiction writer exploring the boundaries of space and time",
     },
     content: {
-      introduction: "In an age of whirlwind tours and bucket-list chasing, slow travel offers a radical alternative: staying longer, going deeper, and truly experiencing a place rather than just seeing it. It's not about how many countries you've visited, but how deeply you've connected with the places you've been.",
+      introduction:
+        "Every story I write begins not with a sentence but with an image — a quality of light on a particular surface, or the posture of a figure standing in a doorway. Illustration is my way of finding those images before the words arrive.",
       sections: [
         {
-          heading: "What Is Slow Travel?",
-          content: "Slow travel is a philosophy that prioritizes depth over breadth, quality over quantity. It means staying in fewer places for longer periods, developing routines in new locations, shopping at local markets, and building relationships with locals. It's about experiencing a destination as a temporary resident rather than a tourist passing through.",
+          heading: "The Visual First Draft",
+          content:
+            "I draw badly, which is to say I draw honestly. My sketches are not meant to be seen — they are meant to see. A quick pencil rendering of a room tells me things about that room that description cannot: the proportions of loneliness, the geometry of safety or threat. The illustration is a tool for understanding, not a product.",
         },
         {
-          heading: "The Benefits of Slowing Down",
-          content: "When you slow down, travel becomes richer and more meaningful. You notice details you'd miss when rushing from sight to sight. You have time for spontaneous conversations, unexpected discoveries, and genuine cultural exchange. You also return home less exhausted and with deeper memories than a photo collection of landmarks.",
-        },
-        {
-          heading: "Practical Steps for Slow Travel",
-          content: "Start by choosing one place and staying at least a week—two or more is even better. Rent an apartment instead of staying in hotels. Shop at local markets, take local transportation, and establish routines like a regular cafe or morning walk. Say yes to invitations from locals. Allow for unplanned time in your schedule.",
-        },
-        {
-          heading: "Overcoming FOMO",
-          content: "The biggest challenge of slow travel is overcoming the fear of missing out. You might not see every museum or landmark. That's okay. You're choosing depth over breadth, experience over completion. Remember: the goal isn't to check off a list—it's to truly experience and understand a place.",
-        },
-        {
-          heading: "Environmental and Cultural Benefits",
-          content: "Slow travel is inherently more sustainable. Fewer flights, more local spending, less overtourism impact. It's also more respectful to local communities. When you stay longer and engage more deeply, you contribute more meaningfully to local economies and build bridges of understanding between cultures.",
+          heading: "What Ink Knows",
+          content:
+            "Ink is committed in a way pencil is not. When you lay down ink, you are deciding. That decisiveness — the understanding that you cannot unsay what you have drawn — teaches something about narrative. Every scene in a story is ink: you have chosen this moment, this arrangement, this light. Own it.",
         },
       ],
-      conclusion: "Slow travel isn't just a way of moving through the world—it's a mindset that values presence, connection, and understanding. In slowing down, we paradoxically experience more. The next time you travel, consider going fewer places and staying longer. You might discover that the journey becomes infinitely richer.",
+      conclusion:
+        "The unseen spaces of a story — the texture of the walls, the color of a character's fear — live in illustration. I draw to find what the words don't know yet.",
     },
-    tags: ["slow travel", "sustainable travel", "cultural immersion", "mindful exploration"],
-  },
-  {
-    id: "G001",
-    title: "Minimalist Living: Creating Space for What Matters Most",
-    subtitle: "The freedom found in letting go",
-    category: "Growth",
-    date: "Mar 10, 2025",
-    readTime: "6 min",
-    image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1920&q=80",
-    author: {
-      name: "David Kim",
-      avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&q=80",
-      bio: "Minimalism advocate and intentional living coach",
-    },
-    content: {
-      introduction: "Minimalism isn't about having less for the sake of having less—it's about making room for more: more clarity, more freedom, more focus on what truly matters. In our consumer-driven culture, choosing to live with less is a radical act of intentionality.",
-      sections: [
-        {
-          heading: "Beyond the Aesthetic",
-          content: "Minimalism has been co-opted by a certain aesthetic—white walls, sparse furniture, perfectly curated spaces. But true minimalism is about values, not visuals. It's about removing excess so you can focus on what adds value to your life. Your minimalist life might look different from someone else's, and that's exactly as it should be.",
-        },
-        {
-          heading: "The Process of Letting Go",
-          content: "Minimalism is as much psychological as it is physical. As you sort through possessions, you're also examining attachments, identities, and habits. That box of college textbooks isn't just books—it's who you used to be. Learning to let go of physical items helps us practice letting go in other areas of life too.",
-        },
-        {
-          heading: "Quality Over Quantity",
-          content: "Minimalism isn't about deprivation—it's about being selective. Instead of ten mediocre pairs of shoes, keep three you love. Instead of a closet full of clothes you never wear, maintain a smaller collection of pieces that make you feel great. When you reduce quantity, you can increase quality.",
-        },
-        {
-          heading: "Mental and Digital Minimalism",
-          content: "Physical clutter is just one dimension. Consider your commitments, your schedule, your digital life. Do you need to be on five social media platforms? Must you say yes to every invitation? Minimalism applies to time and attention too. Protect your mental space as carefully as your physical space.",
-        },
-        {
-          heading: "The Freedom of Less",
-          content: "Here's what minimalism creates: less time spent cleaning and organizing, fewer decisions to make, less financial pressure, more mental clarity, greater focus on relationships and experiences. In removing what doesn't matter, we make room for what does. That's the true gift of minimalism.",
-        },
-      ],
-      conclusion: "Minimalism is a journey, not a destination. You don't need to purge everything or live in an empty room. Start with one drawer, one category, one area of life. As you experience the lightness that comes from letting go, you'll naturally want to continue. What you'll discover isn't just less stuff—it's more freedom, clarity, and space for what truly matters.",
-    },
-    tags: ["minimalism", "intentional living", "simplicity", "personal growth"],
+    tags: ["illustration", "art process", "visual", "creativity"],
   },
 ];
 
-export function getArticleById(id: string): Article | undefined {
-  return articles.find(article => article.id === id);
-}
+export const getArticleById = (id: string): Article | undefined => {
+  return articles.find((article) => article.id === id);
+};
 
-export function getRelatedArticles(currentId: string, limit: number = 3): Article[] {
-  const currentArticle = getArticleById(currentId);
-  if (!currentArticle) return articles.slice(0, limit);
-  
-  // Get articles from the same category, excluding current
-  const related = articles.filter(
-    article => article.id !== currentId && article.category === currentArticle.category
-  );
-  
-  // If not enough from same category, add others
-  if (related.length < limit) {
-    const others = articles.filter(
-      article => article.id !== currentId && article.category !== currentArticle.category
-    );
-    return [...related, ...others].slice(0, limit);
-  }
-  
-  return related.slice(0, limit);
-}
+export const getRelatedArticles = (currentId: string, limit = 3): Article[] => {
+  const current = articles.find((a) => a.id === currentId);
+  if (!current) return articles.slice(0, limit);
+  return articles
+    .filter((a) => a.id !== currentId && a.category === current.category)
+    .slice(0, limit)
+    .concat(
+      articles
+        .filter((a) => a.id !== currentId && a.category !== current.category)
+        .slice(0, Math.max(0, limit - articles.filter((a) => a.id !== currentId && a.category === current.category).slice(0, limit).length))
+    )
+    .slice(0, limit);
+};
