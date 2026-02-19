@@ -34,11 +34,9 @@ const AdminFab = () => {
     <a
       href="/admin"
       aria-label="Admin"
-      className="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-foreground/10 hover:bg-foreground/20 border border-border backdrop-blur-sm transition-all duration-200 flex items-center justify-center group"
+      className="absolute bottom-3 right-3 w-2 h-2 rounded-full bg-foreground/20 hover:bg-foreground/50 transition-colors duration-200"
       title="Admin"
-    >
-      <span className="w-2 h-2 rounded-full bg-foreground/30 group-hover:bg-foreground/60 transition-colors" />
-    </a>
+    />
   );
 };
 
