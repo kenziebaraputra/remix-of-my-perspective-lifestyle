@@ -34,7 +34,7 @@ const AdminFab = () => {
     <a
       href="/admin"
       aria-label="Admin"
-      className="absolute bottom-3 right-3 w-2 h-2 rounded-full bg-foreground/20 hover:bg-foreground/50 transition-colors duration-200"
+      className="absolute bottom-2 right-2 w-1.5 h-1.5 rounded-full bg-foreground/40 hover:bg-foreground/70 transition-colors duration-200"
       title="Admin"
     />
   );
