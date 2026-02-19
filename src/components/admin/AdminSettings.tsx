@@ -9,8 +9,9 @@ type Settings = Record<string, string>;
 const SETTING_KEYS = [
   "hero_title", "hero_subtitle", "intro_text",
   "about_bio", "about_image",
-  "footer_email", "footer_instagram", "footer_x", "footer_youtube", "footer_copyright",
+  "footer_instagram", "footer_x", "footer_youtube", "footer_threads", "footer_copyright",
   "footer_privacy_url", "footer_terms_url",
+  "legal_privacy_content", "legal_terms_content",
 ];
 
 // Field component defined outside so it doesn't remount on every keystroke
@@ -128,16 +129,30 @@ const AdminSettings = () => {
         </TabsContent>
 
         <TabsContent value="social" className="space-y-4">
-          <Field label="Contact Email" value={settings["footer_email"] ?? ""} onChange={(v) => setValue("footer_email", v)} placeholder="hello@sulungarung.com" />
           <Field label="Instagram URL" value={settings["footer_instagram"] ?? ""} onChange={(v) => setValue("footer_instagram", v)} placeholder="https://instagram.com/..." />
           <Field label="X (Twitter) URL" value={settings["footer_x"] ?? ""} onChange={(v) => setValue("footer_x", v)} placeholder="https://x.com/..." />
           <Field label="YouTube URL" value={settings["footer_youtube"] ?? ""} onChange={(v) => setValue("footer_youtube", v)} placeholder="https://youtube.com/@..." />
+          <Field label="Threads URL" value={settings["footer_threads"] ?? ""} onChange={(v) => setValue("footer_threads", v)} placeholder="https://threads.net/@..." />
           <Field label="Copyright Text" value={settings["footer_copyright"] ?? ""} onChange={(v) => setValue("footer_copyright", v)} placeholder="© 2026 Sulung Arung. All rights reserved." />
         </TabsContent>
 
         <TabsContent value="legal" className="space-y-4">
           <Field label="Privacy Policy URL" value={settings["footer_privacy_url"] ?? ""} onChange={(v) => setValue("footer_privacy_url", v)} placeholder="/privacy" />
           <Field label="Terms of Service URL" value={settings["footer_terms_url"] ?? ""} onChange={(v) => setValue("footer_terms_url", v)} placeholder="/terms" />
+          <Field
+            label="Privacy Policy Content"
+            value={settings["legal_privacy_content"] ?? ""}
+            onChange={(v) => setValue("legal_privacy_content", v)}
+            multiline
+            placeholder="Enter the full privacy policy text here…"
+          />
+          <Field
+            label="Terms of Service Content"
+            value={settings["legal_terms_content"] ?? ""}
+            onChange={(v) => setValue("legal_terms_content", v)}
+            multiline
+            placeholder="Enter the full terms of service text here…"
+          />
         </TabsContent>
       </Tabs>
     </div>
